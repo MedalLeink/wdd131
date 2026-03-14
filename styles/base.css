@@ -101,7 +101,6 @@ nav a:hover {
 main {
   max-width: var(--max-width);
   margin: 2.5rem auto;
-  padding: 0 1.5rem;
 }
 
 main h1 {
@@ -141,7 +140,6 @@ main h1 {
 .card-body {
   padding: 1.25rem 1.5rem;
 }
-
 
 .about-top {
   display: flex;
@@ -208,6 +206,10 @@ hr {
 
 .card ul a {
   font-weight: 600;
+}
+
+section h3 {
+    margin-top: -40px;
 }
 
 
