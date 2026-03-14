@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 - Dynamic Web Fundamentals - Nkiru Madeleine Anagha</title>
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Nkiru Madeleine Anagha. A course landing page covering HTML, CSS, and JavaScript fundamentals for dynamic web development.">
+  <meta name="author" content="Nkiru Madeleine Anagha">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - Web Development Fundamentals</h1>
+
+  <header>
+    <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="www.linkedin.com/in/anagha-madeleine" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" rel="noopener">Scripture</a>
+      <a href="index.html">Final Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Nkiru Madeleine Anagha</h1>
+
+    <div class="cards-grid">
+
+      <!-- Card 1: About Me -->
+      <section class="card">
+        <h2>About Me</h2>
+        <div class="card-body">
+          <div class="about-top">
+            <p>
+              Hi! I'm a student at BYU-Idaho studying web development. I love building things on the web and learning new technologies. When I'm not coding, I enjoy hiking, reading, and spending time with family. I'm excited to grow my skills in this course and build some amazing projects.
+            </p>
+            <img src="images/profile.jpg" alt="A photo of Your Name" width="150" height="180" loading="lazy">
+          </div>
+
+          <hr>
+
+          <h3>Lagos, Nigeria</h3>
+          <div class="location-info">
+            <figure>
+              <img src="images/flag.png" alt="Official Flag of Nigeria" width="150" height="100" loading="lazy">
+              <figcaption>Official Flag of Nigeria</figcaption>
+            </figure>
+            <p>
+              Nigeria is the most populous country in Africa, with over 200 million people. Lagos is its largest city and economic hub. Nigeria is known for its rich culture, Nollywood film industry, and vibrant music scene including Afrobeats.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Card 2: Web Dev Resources -->
+      <section class="card">
+        <h2>Web Dev Resources</h2>
+        <div class="card-body">
+          <ul>
+            <li><a href="https://dev.to" target="_blank" rel="noopener">Dev.to Community</a></li>
+            <li><a href="https://www.smashingmagazine.com" target="_blank" rel="noopener">Smashing Magazine</a></li>
+            <li><a href="https://css-tricks.com" target="_blank" rel="noopener">CSS Tricks</a></li>
+            <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3 Schools</a></li>
+            <li><a href="https://www.udemy.com" target="_blank" rel="noopener">Udemy</a></li>
+            <li><a href="https://picsum.photos" target="_blank" rel="noopener">Lorem Picsum Image Placeholder</a></li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span> &mdash; Your Name &mdash; Nigeria
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+
 </body>
 </html>
