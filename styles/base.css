@@ -208,11 +208,6 @@ hr {
   font-weight: 600;
 }
 
-section h3 {
-    margin-top: -40px;
-}
-
-
 footer {
   background-color: var(--color-primary);
   color: var(--color-text-light);
