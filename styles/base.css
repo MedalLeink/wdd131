@@ -1,0 +1,230 @@
+/* =============================================
+   WDD 131 – base.css
+   Author: Nkiru Madeleine Anagha
+   ============================================= */
+
+/* --- CSS Variables / Color Schema --- */
+:root {
+  --color-primary:   #1e3a5f;   
+  --color-secondary: #2e6da4;   
+  --color-accent:    #f5c842;   
+  --color-bg:        #f4f6f9;   
+  --color-surface:   #ffffff;
+  --color-text:      #1a1a2e;
+  --color-text-light:#ffffff;
+  --color-muted:     #555e6e;
+  --color-border:    #cdd4de;
+
+  --font-heading: 'Lora', Georgia, serif;
+  --font-body:    'Source Sans 3', Helvetica, sans-serif;
+
+  --radius: 8px;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+  --max-width: 960px;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+
+header {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+#course-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background-color: var(--color-secondary);
+  padding: 0.6rem 1rem;
+  margin: 0 -2rem -1rem;  
+}
+
+nav a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.3rem 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  border-bottom: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+
+main {
+  max-width: var(--max-width);
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+main h1 {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 1.8rem;
+}
+
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.card h2 {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0.7rem 1rem;
+}
+
+.card-body {
+  padding: 1.25rem 1.5rem;
+}
+
+
+.about-top {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.about-top p {
+  flex: 1;
+}
+
+.about-top img {
+  flex-shrink: 0;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 1rem 0;
+}
+
+
+.card-body h3 {
+  font-family: var(--font-heading);
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 0.9rem;
+}
+
+.location-info {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.location-info figure {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.location-info figcaption {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
+.location-info img {
+  border: 1px solid var(--color-border);
+}
+
+
+.card ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.card ul a {
+  font-weight: 600;
+}
+
+
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+}
+
+footer p {
+  margin: 0.2rem 0;
+}
+
+#lastModified {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+}
