@@ -1,29 +1,24 @@
 /* =====================================================
-   temples.css  —  MOBILE-FIRST styles
-   This file styles the page for small screens (phones).
+   temples.css  —  Mobile-first
+   This particular file styles the page for small screens (phones).
    ===================================================== */
 
-/* --- CSS Custom Properties (variables) --- */
-/* Define your color scheme here in one place.        */
-/* Change these to customize the whole page quickly.  */
 :root {
-  --color-bg:        #f5f0eb;   /* warm off-white background        */
-  --color-header:    #1a1a2e;   /* deep navy header/footer           */
-  --color-accent:    #c9a84c;   /* gold accent color                 */
-  --color-text:      #2e2e2e;   /* dark charcoal body text           */
-  --color-text-light:#ffffff;   /* white text on dark backgrounds    */
-  --color-card-bg:   #ffffff;   /* white figure card background      */
-  --color-border:    #ddd4c4;   /* subtle warm border                */
+  --color-bg:        #f5f0eb;  
+  --color-header:    #1a1a2e; 
+  --color-accent:    #c9a84c;  
+  --color-text:      #2e2e2e; 
+  --color-text-light:#ffffff; 
+  --color-card-bg:   #ffffff;  
+  --color-border:    #ddd4c4; 
 
-  --font-heading: 'Playfair Display', serif;  /* elegant serif for titles */
-  --font-body:    'Lato', sans-serif;          /* clean sans-serif for body */
-
-  --shadow: 0 4px 16px rgba(0, 0, 0, 0.10);  /* soft drop shadow */
-  --radius: 8px;                               /* rounded corners  */
+  --font-heading: 'Playfair Display', serif; 
+  --font-body:    'Lato', sans-serif;  
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  --radius: 8px;                              
 }
 
-/* --- Reset & Base --- */
-/* Remove default browser spacing and set box-sizing */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -37,9 +32,8 @@ body {
   line-height: 1.6;
 }
 
-/* -------------------------------------------------------
-   HEADER
-   ------------------------------------------------------- */
+/* HEADER */
+
 header {
   background-color: var(--color-header);
   color: var(--color-text-light);
@@ -50,12 +44,12 @@ header {
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-/* .header-inner uses Flexbox to place title and button side by side */
+
 .header-inner {
   display: flex;
-  justify-content: space-between;   /* title left, button right */
+  justify-content: space-between;   
   align-items: center;
-  flex-wrap: wrap;                  /* allows nav to wrap below on mobile */
+  flex-wrap: wrap;                
 }
 
 .site-title {
@@ -65,10 +59,7 @@ header {
   letter-spacing: 1px;
 }
 
-/* -------------------------------------------------------
-   HAMBURGER BUTTON
-   Visible on mobile; hidden on larger screens (see temples-large.css)
-   ------------------------------------------------------- */
+/* HAMBURGER BUTTON */
 #hamburger-btn {
   background: none;
   border: 2px solid var(--color-accent);
@@ -76,7 +67,7 @@ header {
   font-size: 1.4rem;
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
-  cursor: pointer;           /* shows pointer hand on hover */
+  cursor: pointer;        
   transition: background 0.2s, color 0.2s;
 }
 
@@ -85,22 +76,19 @@ header {
   color: var(--color-header);
 }
 
-/* -------------------------------------------------------
-   NAV (MOBILE) — hidden by default; JS will show/hide it
-   ------------------------------------------------------- */
+/* NAV (for mobile) */
 nav#main-nav {
-  display: none;            /* hidden until hamburger is clicked */
-  flex-direction: column;   /* stack links vertically on mobile */
-  width: 100%;              /* full width below header           */
+  display: none;          
+  flex-direction: column; 
+  width: 100%;             
   padding: 0.5rem 0;
 }
 
-/* Show the nav when JavaScript adds the 'open' class */
 nav#main-nav.open {
   display: flex;
 }
 
-/* Style each navigation link */
+/* Navigation link styling */
 nav#main-nav a {
   color: var(--color-text-light);
   text-decoration: none;
@@ -114,19 +102,17 @@ nav#main-nav a {
   transition: background 0.2s, color 0.2s, padding-left 0.2s;
 }
 
-/* Hover effect — highlight link on mouse-over */
+/* Hover effect */
 nav#main-nav a:hover {
   background-color: var(--color-accent);
   color: var(--color-header);
-  padding-left: 1.5rem;    /* subtle indent on hover */
+  padding-left: 1.5rem;
 }
 
-/* -------------------------------------------------------
-   MAIN
-   ------------------------------------------------------- */
+/* MAIN */
 main {
-  max-width: 900px;          /* limit width so it's readable   */
-  margin: 2rem auto;         /* auto left/right = centered      */
+  max-width: 900px;         
+  margin: 2rem auto;    
   padding: 0 1rem;
 }
 
@@ -141,10 +127,6 @@ main h1 {
   padding-bottom: 0.5rem;
 }
 
-/* -------------------------------------------------------
-   GALLERY — CSS Grid
-   Mobile: 1 column
-   ------------------------------------------------------- */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;   /* 1 column on mobile */
@@ -156,23 +138,21 @@ figure {
   background-color: var(--color-card-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  overflow: hidden;             /* image corners match card radius */
+  overflow: hidden;           
   box-shadow: var(--shadow);
   transition: transform 0.25s, box-shadow 0.25s;
 }
 
-/* Lift card slightly on hover */
 figure:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
-/* Make image fill the full card width */
 figure img {
   width: 100%;
-  height: 200px;               /* consistent card height         */
-  object-fit: cover;           /* crop to fill without stretching */
-  display: block;              /* removes unwanted gap below image */
+  height: 200px;           
+  object-fit: cover;       
+  display: block;            
 }
 
 /* Caption below the image */
@@ -185,9 +165,7 @@ figure figcaption {
   border-top: 2px solid var(--color-accent);
 }
 
-/* -------------------------------------------------------
-   FOOTER
-   ------------------------------------------------------- */
+/* Footer */
 footer {
   background-color: var(--color-header);
   color: var(--color-text-light);

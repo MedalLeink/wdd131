@@ -11,111 +11,148 @@
     <meta name="author" content="Nkiru Madeleine Anagha" />
 
     <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
-   <!-- Mobile CSS loaded FIRST (mobile-first design) -->
-  <link rel="stylesheet" href="styles/temples.css" />
+    <!-- Mobile CSS loaded FIRST (mobile-first design) -->
+    <link rel="stylesheet" href="styles/temples.css" />
 
-  <!-- Larger-screen CSS loaded SECOND (overrides mobile styles at wider widths) -->
-  <link rel="stylesheet" href="styles/temples-large.css" />
+    <!-- Larger-screen CSS loaded SECOND (overrides mobile styles at wider widths) -->
+    <link rel="stylesheet" href="styles/temples-large.css" />
 
-  <!-- Deferred Script -->
+    <!-- Deferred Script -->
     <script src="scripts/temples.js" defer></script>
   </head>
   <body>
+    <!-- Header -->
+    <header>
+      <div class="header-inner">
+        <p class="site-title">Temple Album</p>
 
-     <!-- Header -->
-  <header>
-    <div class="header-inner">
-      <p class="site-title">Temple Album</p>
- 
-      <!-- Hamburger button — This is only visible on small screens (of which CSS hides on large) -->
-      <button id="hamburger-btn" aria-label="Open navigation menu">&#9776;</button>
- 
-      <!-- Nav links -->
-      <nav id="main-nav">
-        <a href="#">Home</a>
-        <a href="#">Old</a>
-        <a href="#">New</a>
-        <a href="#">Large</a>
-        <a href="#">Small</a>
-      </nav>
-    </div>
-  </header>
- 
-  <!-- Main -->
-  <main>
-    <h1>Temples of The Church of Jesus Christ of Latter-day Saints</h1>
- 
-    <!-- CSS Grid gallery — 9 figures of the temple gallery -->
-    <div class="gallery">
- 
-      <figure>
-        <img src="images/temple-1.png"
-             alt="Salt Lake Temple at dusk" loading="lazy" />
-        <figcaption>Salt Lake Temple &mdash; Salt Lake City, Utah</figcaption>
-      </figure>
- 
-      <figure>
-        <img src="images/temple-2.png"
-             alt="Manti Utah Temple" loading="lazy" />
-        <figcaption>Manti Utah Temple &mdash; Manti, Utah</figcaption>
-      </figure>
- 
-      <figure>
-        <img src="images/temple-3.png"
-             alt="Laie Hawaii Temple" loading="lazy" />
-        <figcaption>Laie Hawaii Temple &mdash; Laie, Hawaii</figcaption>
-      </figure>
- 
-      <figure>
-        <img src="images/temple-4.png"
-             alt="Cardston Alberta Temple" loading="lazy" />
-        <figcaption>Cardston Alberta Temple &mdash; Cardston, Canada</figcaption>
-      </figure>
- 
-      <figure>
-        <img src="images/temple-5.png"
-             alt="Mesa Arizona Temple" loading="lazy" />
-        <figcaption>Mesa Arizona Temple &mdash; Mesa, Arizona</figcaption>
-      </figure>
- 
-      <figure>
-        <img src="images/temple-6.png"
-             alt="Idaho Falls Idaho Temple" loading="lazy" />
-        <figcaption>Idaho Falls Idaho Temple &mdash; Idaho Falls, Idaho</figcaption>
-      </figure>
- 
-      <figure>
-        <img src="images/temple-7.png"
-             alt="Los Angeles California Temple" loading="lazy" />
-        <figcaption>Los Angeles California Temple &mdash; Los Angeles, CA</figcaption>
-      </figure>
- 
-      <figure>
-        <img src="images/temple-8.jpg"
-             alt="Washington D.C. Temple" loading="lazy" />
-        <figcaption>Washington D.C. Temple &mdash; Kensington, Maryland</figcaption>
-      </figure>
- 
-      <figure>
-        <img src="images/temple-9.jpg"
-             alt="Rome Italy Temple at night" loading="lazy" />
-        <figcaption>Rome Italy Temple &mdash; Rome, Italy</figcaption>
-      </figure>
- 
-    </div><!-- /.gallery -->
-  </main>
- 
-  <!-- Footer -->
-  <footer>
-    <p>
-      &copy; <span id="currentyear"></span> &mdash; Nkiru Madeleine Anagha &mdash; Nigeria
-    </p>
-    <p id="lastModified"></p>
-  </footer>
+        <!-- Hamburger button — This is only visible on small screens (of which CSS hides on large) -->
+        <button id="hamburger-btn" aria-label="Open navigation menu">
+          &#9776;
+        </button>
 
+        <!-- Nav links -->
+        <nav id="main-nav">
+          <a href="#">Home</a>
+          <a href="#">Old</a>
+          <a href="#">New</a>
+          <a href="#">Large</a>
+          <a href="#">Small</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <h1>Temples of The Church of Jesus Christ of Latter-day Saints</h1>
+
+      <!-- CSS Grid gallery — 9 figures of the temple gallery -->
+      <div class="gallery">
+        <figure>
+          <img
+            src="images/temple-1.png"
+            alt="Salt Lake Temple at dusk"
+            loading="lazy"
+          />
+          <figcaption>Salt Lake Temple &mdash; Salt Lake City, Utah</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/temple-2.png"
+            alt="Manti Utah Temple"
+            loading="lazy"
+          />
+          <figcaption>Manti Utah Temple &mdash; Manti, Utah</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/temple-3.png"
+            alt="Laie Hawaii Temple"
+            loading="lazy"
+          />
+          <figcaption>Laie Hawaii Temple &mdash; Laie, Hawaii</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/temple-4.png"
+            alt="Cardston Alberta Temple"
+            loading="lazy"
+          />
+          <figcaption>
+            Cardston Alberta Temple &mdash; Cardston, Canada
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/temple-5.png"
+            alt="Mesa Arizona Temple"
+            loading="lazy"
+          />
+          <figcaption>Mesa Arizona Temple &mdash; Mesa, Arizona</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/temple-6.png"
+            alt="Idaho Falls Idaho Temple"
+            loading="lazy"
+          />
+          <figcaption>
+            Idaho Falls Idaho Temple &mdash; Idaho Falls, Idaho
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/temple-7.png"
+            alt="Los Angeles California Temple"
+            loading="lazy"
+          />
+          <figcaption>
+            Los Angeles California Temple &mdash; Los Angeles, CA
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/temple-8.jpg"
+            alt="Washington D.C. Temple"
+            loading="lazy"
+          />
+          <figcaption>
+            Washington D.C. Temple &mdash; Kensington, Maryland
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/temple-9.jpg"
+            alt="Rome Italy Temple at night"
+            loading="lazy"
+          />
+          <figcaption>Rome Italy Temple &mdash; Rome, Italy</figcaption>
+        </figure>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; <span id="currentyear"></span> &mdash; Nkiru Madeleine Anagha
+        &mdash; Nigeria
+      </p>
+      <p id="lastModified"></p>
+    </footer>
   </body>
 </html>
