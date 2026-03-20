@@ -11,17 +11,107 @@
     <meta name="author" content="Nkiru Madeleine Anagha" />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="styles/base.css" />
-    <script src="scripts/getdates.js" defer></script>
+   <!-- Mobile CSS loaded FIRST (mobile-first design) -->
+  <link rel="stylesheet" href="styles/temples.css" />
+
+  <!-- Larger-screen CSS loaded SECOND (overrides mobile styles at wider widths) -->
+  <link rel="stylesheet" href="styles/temples-large.css" />
+
+  <!-- Deferred Script -->
+    <script src="scripts/temples.js" defer></script>
   </head>
   <body>
-    
+
+     <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-inner">
+      <p class="site-title">&#9962; Temple Album</p>
+ 
+      <!-- Hamburger button — visible only on small screens (CSS hides it on large) -->
+      <button id="hamburger-btn" aria-label="Open navigation menu">&#9776;</button>
+ 
+      <!-- Nav links — JavaScript will show/hide these on mobile -->
+      <nav id="main-nav">
+        <a href="#">Home</a>
+        <a href="#">Old</a>
+        <a href="#">New</a>
+        <a href="#">Large</a>
+        <a href="#">Small</a>
+      </nav>
+    </div>
+  </header>
+ 
+  <!-- ===== MAIN ===== -->
+  <main>
+    <h1>Temples of The Church of Jesus Christ of Latter-day Saints</h1>
+ 
+    <!-- CSS Grid gallery — 9 figures as required -->
+    <div class="gallery">
+ 
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Salt_Lake_Temple_at_Dusk_2019.jpg/640px-Salt_Lake_Temple_at_Dusk_2019.jpg"
+             alt="Salt Lake Temple at dusk" loading="lazy" />
+        <figcaption>Salt Lake Temple &mdash; Salt Lake City, Utah</figcaption>
+      </figure>
+ 
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Manti_Utah_Temple.jpg/640px-Manti_Utah_Temple.jpg"
+             alt="Manti Utah Temple" loading="lazy" />
+        <figcaption>Manti Utah Temple &mdash; Manti, Utah</figcaption>
+      </figure>
+ 
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Laie_Hawaii_Temple.jpg/640px-Laie_Hawaii_Temple.jpg"
+             alt="Laie Hawaii Temple" loading="lazy" />
+        <figcaption>Laie Hawaii Temple &mdash; Laie, Hawaii</figcaption>
+      </figure>
+ 
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Cardston_Alberta_Temple.jpg/640px-Cardston_Alberta_Temple.jpg"
+             alt="Cardston Alberta Temple" loading="lazy" />
+        <figcaption>Cardston Alberta Temple &mdash; Cardston, Canada</figcaption>
+      </figure>
+ 
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Mesa_Arizona_Temple.jpg/640px-Mesa_Arizona_Temple.jpg"
+             alt="Mesa Arizona Temple" loading="lazy" />
+        <figcaption>Mesa Arizona Temple &mdash; Mesa, Arizona</figcaption>
+      </figure>
+ 
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Idaho_Falls_Idaho_Temple.jpg/640px-Idaho_Falls_Idaho_Temple.jpg"
+             alt="Idaho Falls Idaho Temple" loading="lazy" />
+        <figcaption>Idaho Falls Idaho Temple &mdash; Idaho Falls, Idaho</figcaption>
+      </figure>
+ 
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Los_Angeles_California_Temple.jpg/640px-Los_Angeles_California_Temple.jpg"
+             alt="Los Angeles California Temple" loading="lazy" />
+        <figcaption>Los Angeles California Temple &mdash; Los Angeles, CA</figcaption>
+      </figure>
+ 
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Washington_D.C._Temple.jpg/640px-Washington_D.C._Temple.jpg"
+             alt="Washington D.C. Temple" loading="lazy" />
+        <figcaption>Washington D.C. Temple &mdash; Kensington, Maryland</figcaption>
+      </figure>
+ 
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Rome_Italy_Temple_at_Night.jpg/640px-Rome_Italy_Temple_at_Night.jpg"
+             alt="Rome Italy Temple at night" loading="lazy" />
+        <figcaption>Rome Italy Temple &mdash; Rome, Italy</figcaption>
+      </figure>
+ 
+    </div><!-- /.gallery -->
+  </main>
+ 
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Temple Album &copy; <span id="copyright-year"></span> | WDD 131</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+  
   </body>
 </html>
