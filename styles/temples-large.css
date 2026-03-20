@@ -1,0 +1,73 @@
+/* =====================================================
+   temples-large.css  —  LARGER SCREEN overrides
+   This file is loaded AFTER temples.css and only
+   applies styles when the screen is 640px wide or more.
+   ===================================================== */
+
+/* @media query: rules inside only apply at 640px+ wide */
+@media (min-width: 640px) {
+
+  /* -------------------------------------------------------
+     HEADER — horizontal layout on larger screens
+     ------------------------------------------------------- */
+  .header-inner {
+    flex-wrap: nowrap;       /* keep everything on one line     */
+  }
+
+  /* -------------------------------------------------------
+     HAMBURGER — HIDE on larger screens
+     Users don't need it; the nav is always visible.
+     ------------------------------------------------------- */
+  #hamburger-btn {
+    display: none;
+  }
+
+  /* -------------------------------------------------------
+     NAV — always visible, horizontal on larger screens
+     ------------------------------------------------------- */
+  nav#main-nav {
+    display: flex !important;     /* override the JS 'hidden' state */
+    flex-direction: row;          /* links side by side             */
+    width: auto;                  /* don't take full width          */
+    gap: 0.25rem;
+  }
+
+  nav#main-nav a {
+    border-bottom: none;          /* remove mobile divider lines    */
+    border-radius: 4px;
+    padding: 0.4rem 0.75rem;
+  }
+
+  /* Keep hover indent effect removed on desktop */
+  nav#main-nav a:hover {
+    padding-left: 0.75rem;        /* no extra indent on desktop     */
+  }
+
+  /* -------------------------------------------------------
+     MAIN h1 — larger font on bigger screens
+     ------------------------------------------------------- */
+  main h1 {
+    font-size: 2rem;
+  }
+
+  /* -------------------------------------------------------
+     GALLERY — 2 columns at medium width
+     ------------------------------------------------------- */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);   /* 2 columns */
+  }
+
+}
+
+/* --- Even wider: 3 columns at 900px+ --- */
+@media (min-width: 900px) {
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);   /* 3 columns */
+  }
+
+  figure img {
+    height: 220px;              /* slightly taller on bigger screens */
+  }
+
+}

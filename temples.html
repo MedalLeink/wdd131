@@ -24,15 +24,15 @@
   </head>
   <body>
 
-     <!-- ===== HEADER ===== -->
+     <!-- Header -->
   <header>
     <div class="header-inner">
-      <p class="site-title">&#9962; Temple Album</p>
+      <p class="site-title">Temple Album</p>
  
-      <!-- Hamburger button — visible only on small screens (CSS hides it on large) -->
+      <!-- Hamburger button — This is only visible on small screens (of which CSS hides on large) -->
       <button id="hamburger-btn" aria-label="Open navigation menu">&#9776;</button>
  
-      <!-- Nav links — JavaScript will show/hide these on mobile -->
+      <!-- Nav links -->
       <nav id="main-nav">
         <a href="#">Home</a>
         <a href="#">Old</a>
@@ -43,63 +43,63 @@
     </div>
   </header>
  
-  <!-- ===== MAIN ===== -->
+  <!-- Main -->
   <main>
     <h1>Temples of The Church of Jesus Christ of Latter-day Saints</h1>
  
-    <!-- CSS Grid gallery — 9 figures as required -->
+    <!-- CSS Grid gallery — 9 figures of the temple gallery -->
     <div class="gallery">
  
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Salt_Lake_Temple_at_Dusk_2019.jpg/640px-Salt_Lake_Temple_at_Dusk_2019.jpg"
+        <img src="images/temple-1.png"
              alt="Salt Lake Temple at dusk" loading="lazy" />
         <figcaption>Salt Lake Temple &mdash; Salt Lake City, Utah</figcaption>
       </figure>
  
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Manti_Utah_Temple.jpg/640px-Manti_Utah_Temple.jpg"
+        <img src="images/temple-2.png"
              alt="Manti Utah Temple" loading="lazy" />
         <figcaption>Manti Utah Temple &mdash; Manti, Utah</figcaption>
       </figure>
  
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Laie_Hawaii_Temple.jpg/640px-Laie_Hawaii_Temple.jpg"
+        <img src="images/temple-3.png"
              alt="Laie Hawaii Temple" loading="lazy" />
         <figcaption>Laie Hawaii Temple &mdash; Laie, Hawaii</figcaption>
       </figure>
  
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Cardston_Alberta_Temple.jpg/640px-Cardston_Alberta_Temple.jpg"
+        <img src="images/temple-4.png"
              alt="Cardston Alberta Temple" loading="lazy" />
         <figcaption>Cardston Alberta Temple &mdash; Cardston, Canada</figcaption>
       </figure>
  
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Mesa_Arizona_Temple.jpg/640px-Mesa_Arizona_Temple.jpg"
+        <img src="images/temple-5.png"
              alt="Mesa Arizona Temple" loading="lazy" />
         <figcaption>Mesa Arizona Temple &mdash; Mesa, Arizona</figcaption>
       </figure>
  
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Idaho_Falls_Idaho_Temple.jpg/640px-Idaho_Falls_Idaho_Temple.jpg"
+        <img src="images/temple-6.png"
              alt="Idaho Falls Idaho Temple" loading="lazy" />
         <figcaption>Idaho Falls Idaho Temple &mdash; Idaho Falls, Idaho</figcaption>
       </figure>
  
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Los_Angeles_California_Temple.jpg/640px-Los_Angeles_California_Temple.jpg"
+        <img src="images/temple-7.png"
              alt="Los Angeles California Temple" loading="lazy" />
         <figcaption>Los Angeles California Temple &mdash; Los Angeles, CA</figcaption>
       </figure>
  
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Washington_D.C._Temple.jpg/640px-Washington_D.C._Temple.jpg"
+        <img src="images/temple-8.png"
              alt="Washington D.C. Temple" loading="lazy" />
         <figcaption>Washington D.C. Temple &mdash; Kensington, Maryland</figcaption>
       </figure>
  
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Rome_Italy_Temple_at_Night.jpg/640px-Rome_Italy_Temple_at_Night.jpg"
+        <img src="images/temple-9.png"
              alt="Rome Italy Temple at night" loading="lazy" />
         <figcaption>Rome Italy Temple &mdash; Rome, Italy</figcaption>
       </figure>
@@ -107,11 +107,13 @@
     </div><!-- /.gallery -->
   </main>
  
-  <!-- ===== FOOTER ===== -->
+  <!-- Footer -->
   <footer>
-    <p>Temple Album &copy; <span id="copyright-year"></span> | WDD 131</p>
-    <p>Last Modified: <span id="last-modified"></span></p>
+    <p>
+      &copy; <span id="currentyear"></span> &mdash; Nkiru Madeleine Anagha &mdash; Nigeria
+    </p>
+    <p id="lastModified"></p>
   </footer>
-  
+
   </body>
 </html>
