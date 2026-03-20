@@ -32,7 +32,7 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
+/* Header */
 
 header {
   background-color: var(--color-header);
@@ -59,7 +59,7 @@ header {
   letter-spacing: 1px;
 }
 
-/* HAMBURGER BUTTON */
+/* Hamburger Button */
 #hamburger-btn {
   background: none;
   border: 2px solid var(--color-accent);
@@ -76,7 +76,7 @@ header {
   color: var(--color-header);
 }
 
-/* NAV (for mobile) */
+/* nav (for mobile) */
 nav#main-nav {
   display: none;          
   flex-direction: column; 
@@ -109,7 +109,7 @@ nav#main-nav a:hover {
   padding-left: 1.5rem;
 }
 
-/* MAIN */
+/* Main */
 main {
   max-width: 900px;         
   margin: 2rem auto;    
