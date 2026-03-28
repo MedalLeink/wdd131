@@ -1,137 +1,182 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A country page about Nigeria – its data, culture, and weather." />
-  <title>Nigeria – Country Page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/place.css" />
-  <script src="scripts/place.js" defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A country page about Nigeria – its data, culture, and weather."
+    />
+    <meta name="author" content="Nkiru Madeleine Anagha" />
+    <title>Nigeria – Country Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+      <h1>Nigeria</h1>
+    </header>
 
-  <!-- ===== HEADER ===== -->
-  <header>
-    <h1>Nigeria</h1>
-  </header>
+    <!-- ===== HERO IMAGE ===== -->
+    <div class="hero">
+      <picture>
+        <source media="(min-width: 769px)" srcset="images/nigeria-large.webp" />
+        <img
+          src="images/nigeria-small.webp"
+          srcset="
+            images/nigeria-small.webp  400w,
+            images/nigeria-large.webp 1400w
+          "
+          sizes="(min-width: 769px) 100vw, 100vw"
+          alt="Lagos skyline at sunset"
+          loading="eager"
+        />
+      </picture>
+    </div>
 
-  <!-- ===== HERO IMAGE ===== -->
-  <div class="hero">
-    <picture>
-  <source media="(min-width: 769px)" srcset="images/nigeria-large.webp" />
-  <img
-    src="images/nigeria-small.webp"
-    srcset="images/nigeria-small.webp 400w, images/nigeria-large.webp 1400w"
-    sizes="(min-width: 769px) 100vw, 100vw"
-    alt="Lagos skyline at sunset"
-  />
-</picture>
-  </div>
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <!-- DATA SECTION -->
+      <section class="data-section card" aria-label="Nigeria Facts">
+        <h2>Data</h2>
+        <dl>
+          <div class="data-row">
+            <dt>Area</dt>
+            <dd>923,768 km²</dd>
+          </div>
+          <div class="data-row">
+            <dt>Population</dt>
+            <dd>220,000,000+</dd>
+          </div>
+          <div class="data-row">
+            <dt>Capital</dt>
+            <dd>Abuja</dd>
+          </div>
+          <div class="data-row">
+            <dt>Languages</dt>
+            <dd>English, Hausa, Yoruba, Igbo</dd>
+          </div>
+          <div class="data-row">
+            <dt>Currency</dt>
+            <dd>Nigerian Naira (₦)</dd>
+          </div>
+          <div class="data-row">
+            <dt>Time Zone</dt>
+            <dd>UTC+1 (WAT)</dd>
+          </div>
+          <div class="data-row">
+            <dt>Calling Code</dt>
+            <dd>+234</dd>
+          </div>
+          <div class="data-row">
+            <dt>Internet TLD</dt>
+            <dd>.ng</dd>
+          </div>
+        </dl>
+      </section>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main>
+      <!-- WEATHER SECTION -->
+      <section class="weather-section card" aria-label="Nigeria Weather">
+        <h2 class="weather-heading">Weather</h2>
 
-    <!-- DATA SECTION -->
-    <section class="data-section card" aria-label="Nigeria Facts">
-      <h2>Data</h2>
-      <dl>
-        <div class="data-row">
-          <dt>Area</dt>
-          <dd>923,768 km²</dd>
+        <!-- SVG icon shown on mobile only -->
+        <div class="weather-icon-mobile" aria-hidden="true">
+          <!-- Partly cloudy SVG icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            width="80"
+            height="80"
+            aria-label="Partly cloudy weather icon"
+          >
+            <!-- Sun -->
+            <circle cx="38" cy="38" r="14" fill="#FFD700" />
+            <!-- Sun rays -->
+            <g stroke="#FFD700" stroke-width="3" stroke-linecap="round">
+              <line x1="38" y1="14" x2="38" y2="8" />
+              <line x1="38" y1="62" x2="38" y2="68" />
+              <line x1="14" y1="38" x2="8" y2="38" />
+              <line x1="62" y1="38" x2="68" y2="38" />
+              <line x1="22" y1="22" x2="17" y2="17" />
+              <line x1="54" y1="54" x2="59" y2="59" />
+              <line x1="54" y1="22" x2="59" y2="17" />
+              <line x1="22" y1="54" x2="17" y2="59" />
+            </g>
+            <!-- Cloud -->
+            <ellipse
+              cx="58"
+              cy="65"
+              rx="24"
+              ry="16"
+              fill="white"
+              stroke="#ccc"
+              stroke-width="1.5"
+            />
+            <ellipse
+              cx="44"
+              cy="68"
+              rx="16"
+              ry="12"
+              fill="white"
+              stroke="#ccc"
+              stroke-width="1.5"
+            />
+            <ellipse
+              cx="68"
+              cy="70"
+              rx="14"
+              ry="10"
+              fill="white"
+              stroke="#ccc"
+              stroke-width="1.5"
+            />
+            <ellipse
+              cx="56"
+              cy="58"
+              rx="18"
+              ry="14"
+              fill="white"
+              stroke="#ccc"
+              stroke-width="1.5"
+            />
+          </svg>
         </div>
-        <div class="data-row">
-          <dt>Population</dt>
-          <dd>220,000,000+</dd>
-        </div>
-        <div class="data-row">
-          <dt>Capital</dt>
-          <dd>Abuja</dd>
-        </div>
-        <div class="data-row">
-          <dt>Languages</dt>
-          <dd>English, Hausa, Yoruba, Igbo</dd>
-        </div>
-        <div class="data-row">
-          <dt>Currency</dt>
-          <dd>Nigerian Naira (₦)</dd>
-        </div>
-        <div class="data-row">
-          <dt>Time Zone</dt>
-          <dd>UTC+1 (WAT)</dd>
-        </div>
-        <div class="data-row">
-          <dt>Calling Code</dt>
-          <dd>+234</dd>
-        </div>
-        <div class="data-row">
-          <dt>Internet TLD</dt>
-          <dd>.ng</dd>
-        </div>
-      </dl>
-    </section>
 
-    <!-- WEATHER SECTION -->
-    <section class="weather-section card" aria-label="Nigeria Weather">
-      <h2 class="weather-heading">Weather</h2>
+        <dl>
+          <div class="data-row">
+            <dt>Temperature</dt>
+            <dd>32 °C</dd>
+          </div>
+          <div class="data-row">
+            <dt>Conditions</dt>
+            <dd>Partly Cloudy</dd>
+          </div>
+          <div class="data-row">
+            <dt>Wind</dt>
+            <dd>14 km/h</dd>
+          </div>
+          <div class="data-row">
+            <dt>Wind Chill</dt>
+            <dd id="wind-chill">--</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
 
-      <!-- SVG icon shown on mobile only -->
-      <div class="weather-icon-mobile" aria-hidden="true">
-        <!-- Partly cloudy SVG icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80" aria-label="Partly cloudy weather icon">
-          <!-- Sun -->
-          <circle cx="38" cy="38" r="14" fill="#FFD700"/>
-          <!-- Sun rays -->
-          <g stroke="#FFD700" stroke-width="3" stroke-linecap="round">
-            <line x1="38" y1="14" x2="38" y2="8"/>
-            <line x1="38" y1="62" x2="38" y2="68"/>
-            <line x1="14" y1="38" x2="8" y2="38"/>
-            <line x1="62" y1="38" x2="68" y2="38"/>
-            <line x1="22" y1="22" x2="17" y2="17"/>
-            <line x1="54" y1="54" x2="59" y2="59"/>
-            <line x1="54" y1="22" x2="59" y2="17"/>
-            <line x1="22" y1="54" x2="17" y2="59"/>
-          </g>
-          <!-- Cloud -->
-          <ellipse cx="58" cy="65" rx="24" ry="16" fill="white" stroke="#ccc" stroke-width="1.5"/>
-          <ellipse cx="44" cy="68" rx="16" ry="12" fill="white" stroke="#ccc" stroke-width="1.5"/>
-          <ellipse cx="68" cy="70" rx="14" ry="10" fill="white" stroke="#ccc" stroke-width="1.5"/>
-          <ellipse cx="56" cy="58" rx="18" ry="14" fill="white" stroke="#ccc" stroke-width="1.5"/>
-        </svg>
-      </div>
-
-      <dl>
-        <div class="data-row">
-          <dt>Temperature</dt>
-          <dd>32 °C</dd>
-        </div>
-        <div class="data-row">
-          <dt>Conditions</dt>
-          <dd>Partly Cloudy</dd>
-        </div>
-        <div class="data-row">
-          <dt>Wind</dt>
-          <dd>14 km/h</dd>
-        </div>
-        <div class="data-row">
-          <dt>Wind Chill</dt>
-          <dd id="wind-chill">--</dd>
-        </div>
-      </dl>
-    </section>
-
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>
-      &copy;<span id="current-year"></span>
-      &nbsp;🌍&nbsp; Nigeria Country Page &nbsp;🌍&nbsp;
-    </p>
-    <p id="last-modified"></p>
-  </footer>
-
-</body>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p>
+        &copy;<span id="current-year"></span>
+        &nbsp;🌍&nbsp; Nigeria Country Page &nbsp;🌍&nbsp;
+      </p>
+      <p id="last-modified"></p>
+    </footer>
+  </body>
 </html>
