@@ -1,16 +1,8 @@
-/* =============================================
-   NIGERIA COUNTRY PAGE – place.css
-   Responsive layout: mobile-first, media query
-   at 769px for wider view
-   ============================================= */
-
-/* --- CSS Custom Properties (Variables) --- */
 :root {
-  /* Nigeria flag-inspired palette */
-  --color-primary: #008751;       /* Nigerian green */
+  --color-primary: #008751;     
   --color-primary-dark: #005c38;
   --color-accent: #ffffff;
-  --color-bg: #f5f0ea;            /* warm parchment */
+  --color-bg: #f5f0ea;         
   --color-surface: #ffffff;
   --color-text: #1a1a1a;
   --color-text-muted: #555;
@@ -18,24 +10,20 @@
   --color-footer-bg: #1a3a28;
   --color-footer-text: #e8f5ed;
 
-  /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'DM Sans', sans-serif;
 
-  /* Spacing */
   --space-xs: 0.4rem;
   --space-sm: 0.8rem;
   --space-md: 1.2rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
 
-  /* Radii & Shadows */
   --radius: 6px;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
   --shadow-card: 0 2px 12px rgba(0, 135, 81, 0.12);
 }
 
-/* ============ RESET & BASE ============ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -63,7 +51,7 @@ img {
   height: auto;
 }
 
-/* ============ HEADER ============ */
+/*  HEADER  */
 header {
   background-color: var(--color-primary);
   text-align: center;
@@ -80,7 +68,7 @@ header h1 {
   text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
-/* ============ HERO IMAGE ============ */
+/*  HERO IMAGE  */
 .hero {
   width: 100%;
   max-height: 520px;
@@ -97,7 +85,7 @@ header h1 {
   display: block;
 }
 
-/* ============ MAIN – MOBILE (stacked) ============ */
+/*  MAIN  */
 main {
   flex: 1;
   padding: var(--space-lg) var(--space-md);
@@ -109,7 +97,7 @@ main {
   width: 100%;
 }
 
-/* ============ CARDS ============ */
+/*  CARDS  */
 .card {
   background: var(--color-surface);
   border-radius: var(--radius);
@@ -129,7 +117,7 @@ main {
   display: inline-block;
 }
 
-/* ============ DATA ROWS (dl/dt/dd) ============ */
+/*  DATA ROWS  */
 dl {
   display: grid;
   gap: var(--space-xs);
@@ -162,24 +150,22 @@ dd {
   font-size: 0.98rem;
 }
 
-/* ============ WEATHER SECTION – MOBILE ============ */
+/*  WEATHER SECTION  */
 .weather-section {
   text-align: left;
 }
 
-/* Mobile: SVG icon displayed */
 .weather-icon-mobile {
   display: flex;
   justify-content: center;
   margin-bottom: var(--space-md);
 }
 
-/* Wider view: hide SVG icon, show CSS pseudo-element emoji instead */
 .weather-heading::after {
-  content: none;   /* hidden by default (mobile) */
+  content: none; 
 }
 
-/* ============ FOOTER ============ */
+/*  FOOTER  */
 footer {
   background-color: var(--color-footer-bg);
   color: var(--color-footer-text);
@@ -195,42 +181,32 @@ footer p {
   margin: 0.2rem 0;
 }
 
-/* ============================================================
-   MEDIA QUERY – WIDER VIEW (>= 769px)
-   Layout: Data card overlays left of hero, Weather overlays right
-   ============================================================ */
 @media (min-width: 769px) {
 
-  /* Hero becomes relative container for overlaid cards */
   .hero {
     position: relative;
     max-height: 520px;
     border-bottom: none;
   }
 
-  /* Main becomes a grid overlaid on the hero */
-  /* We reposition main to overlap hero */
   main {
-    /* Reset stacking layout */
     display: grid;
     grid-template-columns: 300px 1fr 300px;
     grid-template-rows: auto;
     gap: 0;
     padding: 0;
     max-width: 100%;
-    /* Lift main up to overlap hero image */
     margin-top: -490px;
     position: relative;
     z-index: 10;
     align-items: start;
-    pointer-events: none; /* allow clicks to pass through gaps */
+    pointer-events: none; 
   }
 
   .card {
     pointer-events: all;
   }
 
-  /* Data section – left column */
   .data-section {
     grid-column: 1;
     margin: var(--space-lg) 0 var(--space-lg) var(--space-lg);
@@ -239,12 +215,10 @@ footer p {
     border-left: 5px solid var(--color-primary);
   }
 
-  /* Invisible spacer in middle (image shows through) */
   .data-section ~ * + * {
     display: none;
   }
 
-  /* Weather section – right column */
   .weather-section {
     grid-column: 3;
     margin: auto var(--space-lg) var(--space-lg) 0;
@@ -254,12 +228,10 @@ footer p {
     border-left: 5px solid var(--color-primary);
   }
 
-  /* Hide SVG icon on wider view */
   .weather-icon-mobile {
     display: none;
   }
 
-  /* Show emoji via pseudo-element after the "Weather" heading */
   .weather-heading::after {
     content: " ⛅";
     font-size: 1.5rem;
@@ -267,7 +239,6 @@ footer p {
     margin-left: var(--space-sm);
   }
 
-  /* Footer sits below hero + main overlap */
   footer {
     margin-top: 30px;
   }
