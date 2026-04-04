@@ -5,7 +5,7 @@ const temples = [
     dedicated: "2005, August, 7",
     area: 11500,
     imageUrl:
-    "https://churchofjesuschristtemples.org/aba-nigeria-temple/photographs/aba-nigeria-temple-exterior-1439023-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
   },
   {
     templeName: "Manti Utah",
@@ -13,7 +13,7 @@ const temples = [
     dedicated: "1888, May, 21",
     area: 74792,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
   },
   {
     templeName: "Payson Utah",
@@ -21,7 +21,7 @@ const temples = [
     dedicated: "2015, June, 7",
     area: 96630,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
   },
   {
     templeName: "Yigo Guam",
@@ -29,7 +29,7 @@ const temples = [
     dedicated: "2020, May, 2",
     area: 6861,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
   },
   {
     templeName: "Washington D.C.",
@@ -37,7 +37,7 @@ const temples = [
     dedicated: "1974, November, 19",
     area: 156558,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
   },
   {
     templeName: "Lima Perú",
@@ -45,7 +45,7 @@ const temples = [
     dedicated: "1986, January, 10",
     area: 9600,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
   },
   {
     templeName: "Mexico City Mexico",
@@ -53,7 +53,7 @@ const temples = [
     dedicated: "1983, December, 2",
     area: 116642,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
 
   // THREE ADDITIONAL TEMPLES...
@@ -64,7 +64,7 @@ const temples = [
     dedicated: "1893, April, 6",
     area: 253015,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-1075606-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
   },
   {
     templeName: "Rome Italy",
@@ -72,7 +72,7 @@ const temples = [
     dedicated: "2019, March, 10",
     area: 40000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-exterior-1584136-wallpaper.jpg"
+      "https://www.churchofjesuschrist.org/bc/content/ldsorg/locations/visitors-centers/rome-italy-visitors-center/rome-temple-visitor-center-1.jpg"
   },
   {
     templeName: "Accra Ghana",
@@ -80,7 +80,7 @@ const temples = [
     dedicated: "2004, January, 11",
     area: 17500,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-exterior-1439023-wallpaper.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
   }
 ];
 
@@ -88,30 +88,30 @@ const temples = [
 function getDedicationYear(dedicatedStr) {
   return parseInt(dedicatedStr.split(",")[0].trim(), 10);
 }
- 
- 
+
+
 // ── Build & render temple cards ────────────────────────────────────
 function displayTemples(templeList) {
   const gallery = document.getElementById("gallery");
   gallery.innerHTML = ""; // clear previous cards
- 
+
   if (templeList.length === 0) {
     gallery.innerHTML = '<p class="no-results">No temples match this filter.</p>';
     return;
   }
- 
+
   templeList.forEach((temple) => {
     const year = getDedicationYear(temple.dedicated);
- 
+
     const figure = document.createElement("figure");
- 
+
     const img = document.createElement("img");
     img.src = temple.imageUrl;
     img.alt = temple.templeName + " Temple";
     img.loading = "lazy"; // native lazy loading
     img.width = 400;
     img.height = 250;
- 
+
     const caption = document.createElement("figcaption");
     caption.innerHTML = `
       <h2>${temple.templeName}</h2>
@@ -119,19 +119,19 @@ function displayTemples(templeList) {
       <p><span>Dedicated:</span> ${year}</p>
       <p><span>Area:</span> ${temple.area.toLocaleString()} sq ft</p>
     `;
- 
+
     figure.appendChild(img);
     figure.appendChild(caption);
     gallery.appendChild(figure);
   });
 }
- 
- 
+
+
 // ── Filter logic ───────────────────────────────────────────────────
 function filterTemples(filter) {
   const heading = document.getElementById("gallery-heading");
   let filtered;
- 
+
   switch (filter) {
     case "old":
       filtered = temples.filter((t) => getDedicationYear(t.dedicated) < 1900);
@@ -153,54 +153,54 @@ function filterTemples(filter) {
       filtered = temples;
       heading.textContent = "All Temples";
   }
- 
+
   displayTemples(filtered);
 }
- 
- 
+
+
 // ── Navigation: click handlers ─────────────────────────────────────
 function setupNav() {
   const navLinks = document.querySelectorAll("nav#main-nav a");
- 
+
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
- 
+
       // Update active state
       navLinks.forEach((l) => l.classList.remove("active"));
       link.classList.add("active");
- 
+
       // Close hamburger menu on mobile
       document.getElementById("main-nav").classList.remove("open");
       const btn = document.getElementById("hamburger-btn");
       btn.setAttribute("aria-expanded", "false");
- 
+
       filterTemples(link.dataset.filter);
     });
   });
 }
- 
- 
+
+
 // ── Hamburger toggle ───────────────────────────────────────────────
 function setupHamburger() {
   const btn = document.getElementById("hamburger-btn");
   const nav = document.getElementById("main-nav");
- 
+
   btn.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("open");
     btn.setAttribute("aria-expanded", isOpen.toString());
   });
 }
- 
- 
+
+
 // ── Footer: year & last modified ──────────────────────────────────
 function setFooter() {
   document.getElementById("currentyear").textContent = new Date().getFullYear();
   document.getElementById("lastModified").textContent =
     "Last Modified: " + document.lastModified;
 }
- 
- 
+
+
 // ── Init ───────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
   setupNav();
