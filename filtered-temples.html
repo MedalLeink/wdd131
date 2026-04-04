@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temple Album – Nkiru Madeleine Anagha</title>
+    <meta
+      name="description"
+      content="A curated album of LDS temples around the world, filterable by age, size, and more. By Nkiru Madeleine Anagha."
+    />
+    <meta name="author" content="Nkiru Madeleine Anagha" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/filtered-temples.css" />
+    <script src="scripts/filtered-temples.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <p class="site-title">Temple Album</p>
+
+        <button id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
+          &#9776;
+        </button>
+
+        <nav id="main-nav" aria-label="Temple filter navigation">
+          <a href="#" data-filter="home" class="active">Home</a>
+          <a href="#" data-filter="old">Old</a>
+          <a href="#" data-filter="new">New</a>
+          <a href="#" data-filter="large">Large</a>
+          <a href="#" data-filter="small">Small</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1 id="gallery-heading">All Temples</h1>
+      <div class="gallery" id="gallery"></div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="currentyear"></span> &mdash; Nkiru Madeleine Anagha &mdash; Nigeria
+      </p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
