@@ -84,16 +84,15 @@ const temples = [
   }
 ];
 
-// ── Helper: extract the dedication year from "YYYY, Month, D" ──────
+
 function getDedicationYear(dedicatedStr) {
   return parseInt(dedicatedStr.split(",")[0].trim(), 10);
 }
 
 
-// ── Build & render temple cards ────────────────────────────────────
 function displayTemples(templeList) {
   const gallery = document.getElementById("gallery");
-  gallery.innerHTML = ""; // clear previous cards
+  gallery.innerHTML = ""; // this is to clear previous cards
 
   if (templeList.length === 0) {
     gallery.innerHTML = '<p class="no-results">No temples match this filter.</p>';
@@ -127,7 +126,7 @@ function displayTemples(templeList) {
 }
 
 
-// ── Filter logic ───────────────────────────────────────────────────
+// ── Filter logic 
 function filterTemples(filter) {
   const heading = document.getElementById("gallery-heading");
   let filtered;
@@ -181,7 +180,7 @@ function setupNav() {
 }
 
 
-// ── Hamburger toggle ───────────────────────────────────────────────
+// ── Hamburger toggle 
 function setupHamburger() {
   const btn = document.getElementById("hamburger-btn");
   const nav = document.getElementById("main-nav");
@@ -193,7 +192,7 @@ function setupHamburger() {
 }
 
 
-// ── Footer: year & last modified ──────────────────────────────────
+// ── Footer: year & last modified 
 function setFooter() {
   document.getElementById("currentyear").textContent = new Date().getFullYear();
   document.getElementById("lastModified").textContent =
@@ -201,7 +200,6 @@ function setFooter() {
 }
 
 
-// ── Init ───────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
   setupNav();
   setupHamburger();
