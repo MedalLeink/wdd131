@@ -55,7 +55,7 @@ header {
   letter-spacing: 1px;
 }
 
-/* Hamburger */
+/* The Hamburger */
 #hamburger-btn {
   background: none;
   border: 2px solid var(--color-accent);
@@ -72,7 +72,6 @@ header {
   color: var(--color-header);
 }
 
-/* Nav — mobile: hidden until .open */
 nav#main-nav {
   display: none;
   flex-direction: column;
