@@ -56,7 +56,7 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
 
-  // THREE ADDITIONAL TEMPLES...
+  // Three Additional Temples...
 
   {
     templeName: "Salt Lake",
