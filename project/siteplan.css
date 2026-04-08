@@ -1,0 +1,114 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FDF6EC;
+  color: #2C2C2A;
+  line-height: 1.7;
+}
+
+header {
+  background-color: #2C2C2A;
+  color: #FDF6EC;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #B85C2C;
+}
+
+header .tagline {
+  font-size: 1rem;
+  color: #D3D1C7;
+  margin-top: 0.25rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #B85C2C;
+  border-bottom: 2px solid #B85C2C;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+ul { padding-left: 1.5rem; }
+li { margin-bottom: 0.5rem; }
+
+.color-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.swatch {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.swatch p { font-size: 0.9rem; margin-bottom: 0.25rem; }
+
+.type-sample { margin-bottom: 1.5rem; }
+.font-label { font-size: 0.85rem; color: #5F5E5A; margin-bottom: 0.25rem; }
+.font-heading { font-family: 'Playfair Display', serif; }
+.font-body { font-family: 'Inter', sans-serif; }
+.sample-text { font-size: 1.3rem; color: #2C2C2A; }
+
+.wireframe-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+figure { flex: 1; min-width: 200px; }
+figcaption { font-size: 0.9rem; color: #5F5E5A; margin-bottom: 0.5rem; text-align: center; }
+
+.wf-device {
+  background: #E8E6DF;
+  border: 1px solid #B4B2A9;
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: grid;
+  gap: 5px;
+}
+
+.mobile { grid-template-columns: 1fr; max-width: 180px; margin: auto; }
+.desktop { grid-template-columns: repeat(3, 1fr); }
+
+.wf-block {
+  background: #fff;
+  border: 1px dashed #B4B2A9;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  color: #888780;
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.hero { background: #FAEEDA; border-color: #BA7517; color: #854F0B; min-height: 60px; }
+.nav  { min-height: 28px; }
+.cta  { background: #EAF3DE; border-color: #3B6D11; color: #27500A; }
+.footer { background: #2C2C2A; color: #D3D1C7; border-color: #444441; }
+
+footer {
+  background: #2C2C2A;
+  color: #D3D1C7;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
