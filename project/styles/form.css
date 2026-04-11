@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f0f5;
+  color: #2c2c2a;
+}
+
+header {
+  background-color: #2d0030;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+form {
+  background-color: #e0d8e0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.optional {
+  color: #6a0dad;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: white;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Fieldset styling (rating + checkboxes) */
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Star rating row */
+.stars {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stars label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+/* Checkbox labels */
+fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+
+/* Submit button */
+input[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f0eeee;
+  border: 2px solid #2c2c2a;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #2d0030;
+  color: white;
+}
+
+/* Confirmation page */
+.confirmation {
+  background-color: #e0d8e0;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.confirmation a {
+  color: #2d0030;
+  font-weight: 600;
+}
+
+footer {
+  background-color: #2c2c2a;
+  color: #f0eeee;
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
