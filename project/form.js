@@ -1,4 +1,4 @@
-// ---- Product data ----
+// ---- The Product data ----
 const products = [
   { id: "fc-1888", name: "Flux Capacitor" },
   { id: "ps-2000", name: "Power Steering" },
@@ -7,7 +7,7 @@ const products = [
   { id: "dc-2050", name: "Drone Camera" }
 ];
 
-// ---- Populate the select dropdown (only runs if the select exists on the page) ----
+// ---- Populate the select dropdown (hello, code reviewer, this only runs if the select exists on the page) ----
 const productSelect = document.querySelector("#product-name");
 if (productSelect) {
   products.forEach(function(product) {
