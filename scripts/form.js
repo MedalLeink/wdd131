@@ -32,7 +32,7 @@ if (reviewCountDisplay) {
   reviewCountDisplay.textContent = count;
 }
 
-// ---- Last modified date in footer ----
+// ---- Last modified date in footer section ----
 const lastModified = document.querySelector("#last-modified");
 if (lastModified) {
   lastModified.textContent = `Last Modified: ${document.lastModified}`;
