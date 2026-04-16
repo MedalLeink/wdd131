@@ -1,194 +1,225 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Find Your Dish – Lagos Street Eats</title>
-  <meta name="description" content="Answer a few questions about your taste preferences and discover the perfect Lagos street food for you." />
-  <meta name="author" content="Nkiru Madeleine Anagha" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Your Dish – Lagos Street Eats</title>
+    <meta
+      name="description"
+      content="Answer a few questions about your taste preferences and discover the perfect Lagos street food for you."
+    />
+    <meta name="author" content="Nkiru Madeleine Anagha" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/project.css" />
-  <script src="scripts/project.js" defer></script>
-</head>
-<body>
-
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-main">Lagos</span>
-        <span class="logo-sub">Street Eats</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="site-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="dishes.html">Dishes</a></li>
-          <li><a href="quiz.html" class="active">Find Your Dish</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
-    <section class="page-hero page-hero--quiz">
-      <div class="page-hero-content">
-        <h1>Find Your Dish</h1>
-        <p>Answer three questions. We'll find your perfect Lagos street food match.</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/project.css" />
+    <script src="scripts/project.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-main">Lagos</span>
+          <span class="logo-sub">Street Eats</span>
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dishes.html">Dishes</a></li>
+            <li><a href="quiz.html" class="active">Find Your Dish</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section class="quiz-section">
-      <div class="quiz-wrapper">
-
-        <!-- PREVIOUS RESULT BANNER -->
-        <div class="previous-result" id="previous-result" hidden>
-          <p>Your last match: <strong id="prev-result-name"></strong> — <a href="#quiz-form" id="retake-link">retake the quiz?</a></p>
+    <main>
+      <section class="page-hero page-hero--quiz">
+        <div class="page-hero-content">
+          <h1>Find Your Dish</h1>
+          <p>
+            Answer three questions. We'll find your perfect Lagos street food
+            match.
+          </p>
         </div>
+      </section>
 
-        <!-- QUIZ FORM -->
-        <form id="quiz-form" novalidate>
-          <div class="quiz-step" id="step-1">
-            <p class="step-label">Question 1 of 3</p>
-            <fieldset>
-              <legend>How do you feel about spicy food?</legend>
-              <label class="quiz-option">
-                <input type="radio" name="spice" value="none" required />
-                <span class="option-box">
-                  <span class="option-icon">😌</span>
-                  <span class="option-text">No spice please</span>
-                </span>
-              </label>
-              <label class="quiz-option">
-                <input type="radio" name="spice" value="mild" />
-                <span class="option-box">
-                  <span class="option-icon">🙂</span>
-                  <span class="option-text">A little heat is fine</span>
-                </span>
-              </label>
-              <label class="quiz-option">
-                <input type="radio" name="spice" value="hot" />
-                <span class="option-box">
-                  <span class="option-icon">🔥</span>
-                  <span class="option-text">The hotter the better</span>
-                </span>
-              </label>
-            </fieldset>
+      <section class="quiz-section">
+        <div class="quiz-wrapper">
+          <!-- PREVIOUS RESULT BANNER -->
+          <div class="previous-result" id="previous-result" hidden>
+            <p>
+              Your last match: <strong id="prev-result-name"></strong> —
+              <a href="#quiz-form" id="retake-link">retake the quiz?</a>
+            </p>
           </div>
 
-          <div class="quiz-step" id="step-2">
-            <p class="step-label">Question 2 of 3</p>
-            <fieldset>
-              <legend>What kind of texture do you enjoy most?</legend>
-              <label class="quiz-option">
-                <input type="radio" name="texture" value="crispy" required />
-                <span class="option-box">
-                  <span class="option-icon">🥨</span>
-                  <span class="option-text">Crispy &amp; crunchy</span>
-                </span>
-              </label>
-              <label class="quiz-option">
-                <input type="radio" name="texture" value="soft" />
-                <span class="option-box">
-                  <span class="option-icon">🫓</span>
-                  <span class="option-text">Soft &amp; fluffy</span>
-                </span>
-              </label>
-              <label class="quiz-option">
-                <input type="radio" name="texture" value="chewy" />
-                <span class="option-box">
-                  <span class="option-icon">🥩</span>
-                  <span class="option-text">Chewy &amp; meaty</span>
-                </span>
-              </label>
-            </fieldset>
-          </div>
-
-          <div class="quiz-step" id="step-3">
-            <p class="step-label">Question 3 of 3</p>
-            <fieldset>
-              <legend>When do you usually eat street food?</legend>
-              <label class="quiz-option">
-                <input type="radio" name="time" value="morning" required />
-                <span class="option-box">
-                  <span class="option-icon">🌅</span>
-                  <span class="option-text">Morning — breakfast on the go</span>
-                </span>
-              </label>
-              <label class="quiz-option">
-                <input type="radio" name="time" value="afternoon" />
-                <span class="option-box">
-                  <span class="option-icon">☀️</span>
-                  <span class="option-text">Afternoon — quick lunch</span>
-                </span>
-              </label>
-              <label class="quiz-option">
-                <input type="radio" name="time" value="evening" />
-                <span class="option-box">
-                  <span class="option-icon">🌙</span>
-                  <span class="option-text">Evening — night market snack</span>
-                </span>
-              </label>
-            </fieldset>
-          </div>
-
-          <p class="quiz-error" id="quiz-error" hidden>Please answer all three questions before submitting.</p>
-
-          <button type="submit" class="btn btn-primary btn-full">Find My Match →</button>
-        </form>
-
-        <!-- RESULT -->
-        <div class="quiz-result" id="quiz-result" hidden>
-          <div class="result-header">
-            <p class="result-eyebrow">Your perfect Lagos street food is…</p>
-            <h2 id="result-name"></h2>
-          </div>
-          <div class="result-body">
-            <div class="result-image-wrap">
-              <img id="result-image" src="" alt="" loading="lazy" width="400" height="300" />
+          <!-- QUIZ FORM -->
+          <form id="quiz-form" novalidate>
+            <div class="quiz-step" id="step-1">
+              <p class="step-label">Question 1 of 3</p>
+              <fieldset>
+                <legend>How do you feel about spicy food?</legend>
+                <label class="quiz-option">
+                  <input type="radio" name="spice" value="none" required />
+                  <span class="option-box">
+                    <span class="option-icon">😌</span>
+                    <span class="option-text">No spice please</span>
+                  </span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="spice" value="mild" />
+                  <span class="option-box">
+                    <span class="option-icon">🙂</span>
+                    <span class="option-text">A little heat is fine</span>
+                  </span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="spice" value="hot" />
+                  <span class="option-box">
+                    <span class="option-icon">🔥</span>
+                    <span class="option-text">The hotter the better</span>
+                  </span>
+                </label>
+              </fieldset>
             </div>
-            <div class="result-details">
-              <p id="result-description"></p>
-              <ul class="result-tags" id="result-tags"></ul>
-              <div class="result-actions">
-                <button class="btn btn-outline" id="retake-btn">Retake Quiz</button>
-                <a href="dishes.html" class="btn btn-secondary">See All Dishes →</a>
+
+            <div class="quiz-step" id="step-2">
+              <p class="step-label">Question 2 of 3</p>
+              <fieldset>
+                <legend>What kind of texture do you enjoy most?</legend>
+                <label class="quiz-option">
+                  <input type="radio" name="texture" value="crispy" required />
+                  <span class="option-box">
+                    <span class="option-icon">🥨</span>
+                    <span class="option-text">Crispy &amp; crunchy</span>
+                  </span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="texture" value="soft" />
+                  <span class="option-box">
+                    <span class="option-icon">🫓</span>
+                    <span class="option-text">Soft &amp; fluffy</span>
+                  </span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="texture" value="chewy" />
+                  <span class="option-box">
+                    <span class="option-icon">🥩</span>
+                    <span class="option-text">Chewy &amp; meaty</span>
+                  </span>
+                </label>
+              </fieldset>
+            </div>
+
+            <div class="quiz-step" id="step-3">
+              <p class="step-label">Question 3 of 3</p>
+              <fieldset>
+                <legend>When do you usually eat street food?</legend>
+                <label class="quiz-option">
+                  <input type="radio" name="time" value="morning" required />
+                  <span class="option-box">
+                    <span class="option-icon">🌅</span>
+                    <span class="option-text"
+                      >Morning — breakfast on the go</span
+                    >
+                  </span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="time" value="afternoon" />
+                  <span class="option-box">
+                    <span class="option-icon">☀️</span>
+                    <span class="option-text">Afternoon — quick lunch</span>
+                  </span>
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="time" value="evening" />
+                  <span class="option-box">
+                    <span class="option-icon">🌙</span>
+                    <span class="option-text"
+                      >Evening — night market snack</span
+                    >
+                  </span>
+                </label>
+              </fieldset>
+            </div>
+
+            <p class="quiz-error" id="quiz-error" hidden>
+              Please answer all three questions before submitting.
+            </p>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Find My Match →
+            </button>
+          </form>
+
+          <!-- RESULT -->
+          <div class="quiz-result" id="quiz-result" hidden>
+            <div class="result-header">
+              <p class="result-eyebrow">Your perfect Lagos street food is…</p>
+              <h2 id="result-name"></h2>
+            </div>
+            <div class="result-body">
+              <div class="result-image-wrap">
+                <img
+                  id="result-image"
+                  src=""
+                  alt=""
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+              </div>
+              <div class="result-details">
+                <p id="result-description"></p>
+                <ul class="result-tags" id="result-tags"></ul>
+                <div class="result-actions">
+                  <button class="btn btn-outline" id="retake-btn">
+                    Retake Quiz
+                  </button>
+                  <a href="dishes.html" class="btn btn-secondary"
+                    >See All Dishes →</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+    </main>
 
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-main">Lagos</span>
+          <span class="logo-sub">Street Eats</span>
+          <p>Celebrating the food culture of Lagos, Nigeria.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dishes.html">Dishes</a></li>
+            <li><a href="quiz.html">Find Your Dish</a></li>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="logo-main">Lagos</span>
-        <span class="logo-sub">Street Eats</span>
-        <p>Celebrating the food culture of Lagos, Nigeria.</p>
+      <div class="footer-bottom">
+        <p>
+          © 2026 Lagos Street Eats | WDD 131 Project | Nkiru Madeleine Anagha
+        </p>
+        <p id="last-modified-quiz"></p>
       </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="dishes.html">Dishes</a></li>
-          <li><a href="quiz.html">Find Your Dish</a></li>
-          <li><a href="references.html">References</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Lagos Street Eats | WDD 131 Project | Nkiru Madeleine Anagha</p>
-      <p id="last-modified-quiz"></p>
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>

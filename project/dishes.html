@@ -1,103 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dishes – Lagos Street Eats</title>
-  <meta name="description" content="Browse all of Nigerian street food dishes such as suya, puff-puff, akara, and boli — filter by category, spice level, or region." />
-  <meta name="author" content="Nkiru Madeleine Anagha" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishes – Lagos Street Eats</title>
+    <meta
+      name="description"
+      content="Browse all of Nigerian street food dishes such as suya, puff-puff, akara, and boli — filter by category, spice level, or region."
+    />
+    <meta name="author" content="Nkiru Madeleine Anagha" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/project.css" />
-  <script src="scripts/project.js" defer></script>
-</head>
-<body>
-
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-main">Lagos</span>
-        <span class="logo-sub">Street Eats</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="site-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="dishes.html" class="active">Dishes</a></li>
-          <li><a href="quiz.html">Find Your Dish</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
-    <section class="page-hero page-hero--dishes">
-      <div class="page-hero-content">
-        <h1>The Dishes</h1>
-        <p>Every dish has a story. Here are Lagos's most beloved street foods.</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/project.css" />
+    <script src="scripts/project.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-main">Lagos</span>
+          <span class="logo-sub">Street Eats</span>
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dishes.html" class="active">Dishes</a></li>
+            <li><a href="quiz.html">Find Your Dish</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- FILTER BAR -->
-    <section class="filter-section">
-      <div class="filter-inner">
-        <p class="filter-label">Filter by category:</p>
-        <div class="filter-buttons" role="group" aria-label="Filter dishes by category">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="grilled">Grilled</button>
-          <button class="filter-btn" data-filter="fried">Fried</button>
-          <button class="filter-btn" data-filter="porridge">Porridge &amp; Stew</button>
-          <button class="filter-btn" data-filter="snack">Snacks</button>
+    <main>
+      <section class="page-hero page-hero--dishes">
+        <div class="page-hero-content">
+          <h1>The Dishes</h1>
+          <p>
+            Every dish has a story. Here are Lagos's most beloved street foods.
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- DISHES GRID -->
-    <section class="dishes-section">
-      <div class="dishes-full-grid" id="dishes-full-grid">
-        <!-- Populated by JavaScript -->
-      </div>
-      <p class="no-results" id="no-results" hidden>No dishes match this filter.</p>
-    </section>
+      <!-- FILTER BAR -->
+      <section class="filter-section">
+        <div class="filter-inner">
+          <p class="filter-label">Filter by category:</p>
+          <div
+            class="filter-buttons"
+            role="group"
+            aria-label="Filter dishes by category"
+          >
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="grilled">Grilled</button>
+            <button class="filter-btn" data-filter="fried">Fried</button>
+            <button class="filter-btn" data-filter="porridge">
+              Porridge &amp; Stew
+            </button>
+            <button class="filter-btn" data-filter="snack">Snacks</button>
+          </div>
+        </div>
+      </section>
 
-    <!-- DISH DETAIL MODAL -->
-    <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
-      <div class="modal-box">
-        <button class="modal-close" id="modal-close" aria-label="Close dish detail">✕</button>
-        <div class="modal-content" id="modal-content">
+      <!-- DISHES GRID -->
+      <section class="dishes-section">
+        <div class="dishes-full-grid" id="dishes-full-grid">
           <!-- Populated by JavaScript -->
         </div>
+        <p class="no-results" id="no-results" hidden>
+          No dishes match this filter.
+        </p>
+      </section>
+
+      <!-- DISH DETAIL MODAL -->
+      <div
+        class="modal-overlay"
+        id="modal-overlay"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        hidden
+      >
+        <div class="modal-box">
+          <button
+            class="modal-close"
+            id="modal-close"
+            aria-label="Close dish detail"
+          >
+            ✕
+          </button>
+          <div class="modal-content" id="modal-content">
+            <!-- Populated by JavaScript -->
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
 
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="logo-main">Lagos</span>
-        <span class="logo-sub">Street Eats</span>
-        <p>Celebrating the food culture of Lagos, Nigeria.</p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-main">Lagos</span>
+          <span class="logo-sub">Street Eats</span>
+          <p>Celebrating the food culture of Lagos, Nigeria.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dishes.html">Dishes</a></li>
+            <li><a href="quiz.html">Find Your Dish</a></li>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="dishes.html">Dishes</a></li>
-          <li><a href="quiz.html">Find Your Dish</a></li>
-          <li><a href="references.html">References</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Lagos Street Eats | WDD 131 Project | Nkiru Madeleine Anagha</p>
-      <p id="last-modified-dishes"></p>
-    </div>
-  </footer>
-
-</body>
+      <div class="footer-bottom">
+        <p>
+          © 2026 Lagos Street Eats | WDD 131 Project | Nkiru Madeleine Anagha
+        </p>
+        <p id="last-modified-dishes"></p>
+      </div>
+    </footer>
+  </body>
 </html>
